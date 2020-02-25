@@ -3,10 +3,12 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Example Component</div>
+                    <div class="card-header">Scoped Slots</div>
 
                     <div class="card-body">
-                        I'm an example component.
+                        <ul>
+                            <li v-for="item in items" v-text="item"></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -16,6 +18,9 @@
 
 <script>
     export default {
+
+        props: ['items'],
+
         mounted() {
             console.log('Component mounted.')
         }
