@@ -15,7 +15,19 @@
 
         <div id="app" class="mt-5">
 
-            <menu-list :items="['one', 'two', 'three']"></menu-list>
+            <menu-list :items="['one', 'two', 'three']">
+
+                <template slot="menu-item" scope="props">
+
+                    <div>
+
+                        <em v-text="props.item"></em>
+
+                    </div>
+
+                </template>
+
+            </menu-list>
 
         </div>
 

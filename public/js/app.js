@@ -1926,6 +1926,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['items'],
   mounted: function mounted() {
@@ -37315,7 +37317,11 @@ var render = function() {
             _c(
               "ul",
               _vm._l(_vm.items, function(item) {
-                return _c("li", { domProps: { textContent: _vm._s(item) } })
+                return _c(
+                  "li",
+                  [_vm._t("menu-item", [_vm._v(_vm._s(item))], { item: item })],
+                  2
+                )
               }),
               0
             )

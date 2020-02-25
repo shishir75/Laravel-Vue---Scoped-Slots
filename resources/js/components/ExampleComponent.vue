@@ -7,7 +7,9 @@
 
                     <div class="card-body">
                         <ul>
-                            <li v-for="item in items" v-text="item"></li>
+                            <li v-for="item in items">
+                                <slot name="menu-item" :item = 'item'>{{ item }}</slot>
+                            </li>
                         </ul>
                     </div>
                 </div>
